@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>fore</title>
+    <!--动态获取手机html的font-size值-->
+    <script type="text/javascript">
+      // 375的设计稿根元素大小设置为16。
+      // 750的设计稿根元素大小设置为32。
+      const baseSize = 16;
+      function setRem() {
+      const scale = document.documentElement.clientWidth / 375;
+      document.documentElement.style.fontSize = (baseSize * Math.min(scale, 2)) + 'px';
+      }
+
+      // 调用
+      setRem();
+      window.onresize = function() {
+      setRem();
+      }
+
+    </script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_733720_b0k748iu9jp.css">
+    <title>聚美优品触屏版</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but fore doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
