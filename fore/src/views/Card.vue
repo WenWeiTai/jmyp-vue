@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="card">
     购物车
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang='scss'>
-  .index {
+  .card {
     flex: 1;
     overflow-y: auto;
   }

@@ -8,9 +8,12 @@ const router = new Router({
     {
       // 首页
       path: '/',
-      alias: 'index',
       component: () => import('./views/Home.vue'),
       children: [
+        {
+          path: '',
+          redirect: './views/Index.vue'
+        },
         {
           path: 'index',
           name: 'index',

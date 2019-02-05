@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="center">
     我的
   </div>
 </template>
@@ -10,6 +10,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss'>
+  .center {
+    flex: 1;
+    overflow-y: auto;
+  }
 </style>
